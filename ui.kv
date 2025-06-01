@@ -1,0 +1,36 @@
+<JizhangForm>:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 10
+
+    Label:
+        text: '記帳類型'
+
+    Spinner:
+        id: type_spinner
+        text: '支出'
+        values: ['支出', '收入']
+        size_hint_y: None
+        height: 44
+
+    Label:
+        text: '金額'
+
+    TextInput:
+        id: amount_input
+        multiline: False
+        input_filter: 'int'
+
+    Label:
+        text: '備註'
+
+    TextInput:
+        id: remark_input
+        multiline: False
+
+    Button:
+        text: '送出'
+        size_hint_y: None
+        height: 50
+        background_color: 0.3, 0.5, 1, 1
+        on_press: root.submit(self)
